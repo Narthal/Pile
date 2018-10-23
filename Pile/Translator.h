@@ -29,6 +29,10 @@
 #define COMP_OP_GET_COMP_W_NAME "GetComponentWithName"
 #define COMP_OP_ADD_COMP "AddComponent"
 
+// extern
+extern enum Token currentToken;			// why the fuck is the type "Token" unrecogniseable ?! (quickfix : def enum, int is default in c standard)
+extern char * currentVal;
+extern int currentValLen;
 
 // functions
 void TranslateToken(char * buff, int len);

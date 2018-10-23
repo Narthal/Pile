@@ -146,6 +146,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Common.c" />
+    <ClCompile Include="Interpreter.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Reader.c" />
     <ClCompile Include="Translator.c" />
@@ -153,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="Common.h" />
     <ClInclude Include="Error.h" />
+    <ClInclude Include="Interpreter.h" />
     <ClInclude Include="Pile.h" />
     <ClInclude Include="Reader.h" />
     <ClInclude Include="Translator.h" />

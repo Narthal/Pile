@@ -4,5 +4,6 @@
 #include "Reader.h"
 #include "Translator.h"
 #include "Common.h"
+#include "Interpreter.h"
 
 #endif

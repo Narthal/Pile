@@ -1,16 +1,23 @@
 #include "Translator.h"
 
+// the current token data
 Token currentToken;
 char * currentVal;
 int currentValLen;
 
-Context context = eNullContext;
-Token tokenExpectation = eNullToken;
-
+// token logic
+int isFirstTranslation = 1;
 
 
 void TranslateToken(char * buff, int len)
 {
+	// on the first run add ROOT interface as first obj
+	if (isFirstTranslation == 1)
+	{
+		isFirstTranslation = 0;
+		CreateRootOBJ();
+	}
+
 	// Handle len error
 	if (len < 1)
 	{
@@ -67,6 +74,8 @@ void TranslateToken(char * buff, int len)
 	// set other token values
 	currentVal = buff;
 	currentValLen = len;
+
+	HndlToken();
 
 	return;
 }
